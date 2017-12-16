@@ -1,9 +1,11 @@
+# Parameters https://technet.microsoft.com/en-us/library/jj554301.aspx
 Param(
   [string]$target,
   [string]$shortcutbase
 )
 
 # Get the name of the last folder in $target
+# RegExp https://www.powershelladmin.com/wiki/Powershell_regular_expressions#Example_-_The_-match_Operator
 if ((Get-Item $target) -is [System.IO.DirectoryInfo])
 {
 # match 'test' in 'D:\Thomas\FastAcces 33\test'
